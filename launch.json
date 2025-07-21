@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "ProyekAkhir_85c6faf6"
+    },
+    {
+      "type": "java",
+      "name": "Smartlock",
+      "request": "launch",
+      "mainClass": "Smartlock",
+      "projectName": "ProyekAkhir_85c6faf6"
+    },
+    {
+      "type": "java",
+      "name": "Run SmartLock",
+      "request": "launch",
+      "mainClass": "Class.Main",
+      "vmArgs": "--module-path C:/JavaFX/javafx-sdk-17.0.15/lib --add-modules javafx.controls,javafx.fxml"
+    }
+  ]
+}
