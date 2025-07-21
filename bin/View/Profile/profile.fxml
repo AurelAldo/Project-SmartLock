@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="277.0" stylesheets="@profile.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Class.Profile.ProfileController">
+    <children>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="600.0" prefWidth="277.0" vbarPolicy="AS_NEEDED" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <content>
+                <VBox fx:id="rootBox" alignment="TOP_CENTER" prefHeight="799.0" prefWidth="267.0" spacing="16.0">
+                    <padding>
+                        <Insets bottom="24" left="16" right="16" top="24" />
+                    </padding>
+                    <VBox alignment="CENTER" prefHeight="86.0" prefWidth="230.0" spacing="8">
+                        <StackPane prefHeight="66.0" prefWidth="208.0">
+                            <ImageView fx:id="avatarImage" fitHeight="58.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" />
+                        </StackPane>
+
+                        <Label fx:id="userNameLabel" styleClass="profile-username" text="User" />
+                        <HBox alignment="CENTER" spacing="4">
+                            <Label fx:id="levelLabel" styleClass="profile-level" text="Level 1" />
+                            <Label text="|" />
+                            <Label styleClass="profile-xp" text="XP: 0/100" fx:id="xpLabel" />
+                        </HBox>
+                    </VBox>
+
+                    <Separator prefWidth="200" />
+                    <HBox alignment="CENTER" spacing="16">
+                        <VBox alignment="CENTER" spacing="4">
+                            <Label prefHeight="18.0" prefWidth="103.0" styleClass="profile-stat-heading" text="Persentase" />
+                            <Label fx:id="percentStatLabel" styleClass="profile-stat-value" text="30%" />
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="32" />
+                        <VBox alignment="CENTER" spacing="4">
+                            <Label prefHeight="18.0" prefWidth="104.0" styleClass="profile-stat-heading" text="Mingguan" textAlignment="CENTER" />
+                            <Label fx:id="weeklyTasksLabel" styleClass="profile-stat-value" text="3/10" />
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="32" />
+                        <VBox alignment="CENTER" spacing="4">
+                            <Label prefHeight="15.0" prefWidth="106.0" styleClass="profile-stat-heading" text="Akumulasi" textAlignment="CENTER">
+                        <font>
+                           <Font size="10.0" />
+                        </font></Label>
+                            <Label fx:id="totalTasksLabel" styleClass="profile-stat-value" text="15" />
+                        </VBox>
+                    </HBox>
+
+
+                    <VBox alignment="CENTER_LEFT" maxWidth="Infinity" spacing="8">
+                        <Label styleClass="profile-section-heading" text="Progress Menuju Reward:" />
+                        <HBox alignment="CENTER_LEFT" spacing="8">
+                            <Label fx:id="rewardPercentLabel" text="30%" />
+                            <ProgressBar fx:id="rewardProgressBar" prefHeight="18.0" prefWidth="210.0" progress="0.3" />
+                        </HBox>
+                    </VBox>
+
+                    <Separator prefWidth="200" />
+
+                    <VBox alignment="TOP_LEFT" maxWidth="Infinity" spacing="8">
+                        <Label styleClass="profile-section-heading" text="Achievements" />
+                        <ScrollPane fx:id="achievementScroll" fitToWidth="true" hbarPolicy="NEVER" prefViewportHeight="120" vbarPolicy="AS_NEEDED">
+                            <content>
+                                <TilePane fx:id="achievementTilePane" alignment="CENTER_LEFT" hgap="8" prefColumns="3" vgap="8">
+                                    <VBox alignment="CENTER" spacing="4" styleClass="achievement-item locked">
+                                        <Label styleClass="achievement-icon" text="🔒" />
+                                        <Label styleClass="achievement-label" text="Task Starter" wrapText="true" />
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="55.0" prefWidth="73.0" spacing="4" styleClass="achievement-item unlocked">
+                                        <Label styleClass="achievement-icon" text="🏅" />
+                                        <Label styleClass="achievement-label" text="Focus Day" wrapText="true" />
+                                    </VBox>
+                                </TilePane>
+                            </content>
+                        </ScrollPane>
+                    </VBox>
+
+                    <Separator prefWidth="200" />
+
+                    <VBox alignment="TOP_LEFT" maxWidth="Infinity" spacing="8">
+                        <HBox alignment="CENTER_LEFT" spacing="8">
+                            <Label styleClass="profile-section-heading" text="Poin:" />
+                            <Label fx:id="pointsLabel" styleClass="profile-points-value" text="0" />
+                        </HBox>
+                        <ScrollPane fx:id="rewardScroll" fitToWidth="true" hbarPolicy="NEVER" prefViewportHeight="160" vbarPolicy="AS_NEEDED">
+                            <content>
+                                <VBox fx:id="rewardBox" alignment="TOP_LEFT" prefWidth="Infinity" spacing="8">
+                                    <HBox alignment="CENTER_LEFT" spacing="8" styleClass="reward-item">
+                                        <Label fx:id="namaReward1" prefHeight="18.0" prefWidth="114.0" styleClass="reward-item-label" text="New Profile Picture" />
+                                        <Region HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="pointreward1" styleClass="reward-item-cost" text="100" />
+                                        <Button onAction="#buttonClaimReward" prefHeight="27.0" prefWidth="55.0" style="-fx-background-radius: 15; -fx-background-color: #5865F2;" text="Beli" textFill="WHITE" />
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" spacing="8" styleClass="reward-item">
+                                        <Label fx:id="namaReward2" styleClass="reward-item-label" text="New Badge" />
+                                        <Region HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="pointreward2" styleClass="reward-item-cost" text="200" />
+                                        <Button onAction="#buttonCandleRandom" prefHeight="27.0" prefWidth="55.0" style="-fx-background-radius: 15; -fx-background-color: #5865F2;" text="Beli" textFill="WHITE" />
+                                    </HBox>
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </VBox>
+
+                    <Region prefHeight="40" />
+                </VBox>
+            </content>
+        </ScrollPane>
+      <Pane layoutX="208.0" layoutY="-2.0" prefHeight="42.0" prefWidth="56.0">
+         <children>
+            <Button layoutX="17.0" layoutY="9.0" mnemonicParsing="false" onAction="#Setting" prefHeight="25.0" prefWidth="23.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../../AsetSB/settings.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutY="561.0" prefHeight="50.0" prefWidth="288.0" style="-fx-border-color: grey; -fx-background-color: white; -fx-background-radius: 4 4 0 0; -fx-border-radius: 4 4 0 0;">
+         <children>
+            <Button fx:id="HomeView" layoutX="14.0" layoutY="1.0" mnemonicParsing="false" onAction="#tomHome" prefHeight="43.0" prefWidth="42.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <VBox prefHeight="52.0" prefWidth="52.0">
+                     <children>
+                        <ImageView fitHeight="27.0" fitWidth="29.0">
+                           <image>
+                              <Image url="@../../AsetSB/icons8-home-button-50.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#515151" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" textAlignment="CENTER" wrappingWidth="29.2017822265625">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </graphic>
+            </Button>
+            <Button fx:id="LockView" layoutX="81.0" layoutY="1.0" mnemonicParsing="false" onAction="#tomLock" prefHeight="43.0" prefWidth="42.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <VBox prefHeight="52.0" prefWidth="52.0">
+                     <children>
+                        <ImageView fitHeight="27.0" fitWidth="30.0">
+                           <image>
+                              <Image url="@../../AsetSB/icons8-lock-64.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#515151" strokeType="OUTSIDE" strokeWidth="0.0" text="Lock" textAlignment="CENTER" wrappingWidth="30.5562744140625">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </graphic>
+            </Button>
+            <Button fx:id="TaskView" layoutX="150.0" layoutY="1.0" mnemonicParsing="false" onAction="#tomTask" prefHeight="43.0" prefWidth="42.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <VBox prefHeight="52.0" prefWidth="52.0">
+                     <children>
+                        <ImageView fitHeight="27.0" fitWidth="28.0">
+                           <image>
+                              <Image url="@../../AsetSB/icons8-assignment-50.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#515151" strokeType="OUTSIDE" strokeWidth="0.0" text="Task" textAlignment="CENTER" wrappingWidth="29.1409912109375">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </graphic>
+            </Button>
+            <Button fx:id="ProfileView" layoutX="220.0" layoutY="1.0" mnemonicParsing="false" onAction="#tomProfile" prefHeight="47.0" prefWidth="32.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <VBox prefHeight="52.0" prefWidth="52.0">
+                     <children>
+                        <ImageView fitHeight="27.0" fitWidth="29.0">
+                           <image>
+                              <Image url="@../../AsetSB/profiles.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#515151" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile" textAlignment="CENTER">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

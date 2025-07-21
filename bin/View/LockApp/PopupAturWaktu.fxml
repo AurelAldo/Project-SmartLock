@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Class.LockControl.PopupAturWaktuController" style="-fx-background-color: white; -fx-padding: 20;">
+    <children>
+        <Text text="Atur Waktu Batas Penggunaan" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+        
+        <!-- Waktu (jam & menit) -->
+        <GridPane hgap="10" vgap="10" alignment="CENTER">
+            <children>
+                <Label text="Jam:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Spinner fx:id="spinnerJam" prefWidth="80" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Menit:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Spinner fx:id="spinnerMenit" prefWidth="80" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            </children>
+        </GridPane>
+
+        <!-- Checkbox Hari -->
+        <VBox spacing="5.0" alignment="CENTER_LEFT" style="-fx-padding: 10;">
+            <Text text="Terapkan pada hari:" style="-fx-font-weight: bold;" />
+            <CheckBox fx:id="cbSenin" text="Senin" />
+            <CheckBox fx:id="cbSelasa" text="Selasa" />
+            <CheckBox fx:id="cbRabu" text="Rabu" />
+            <CheckBox fx:id="cbKamis" text="Kamis" />
+            <CheckBox fx:id="cbJumat" text="Jumat" />
+            <CheckBox fx:id="cbSabtu" text="Sabtu" />
+            <CheckBox fx:id="cbMinggu" text="Minggu" />
+        </VBox>
+
+        <!-- Tombol Simpan -->
+        <Button text="Simpan" onAction="#handleSimpan" style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+    </children>
+</VBox>
