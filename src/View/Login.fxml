@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="600.0" prefWidth="277.0"
+      xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="Class.LogControl">
+   <children>
+      <Pane prefHeight="290.0" prefWidth="277.0"
+            style="-fx-background-color: #5865F2; -fx-background-radius: 0 0 7 7;" />
+      <Pane layoutX="25.0" layoutY="87.0" prefHeight="412.0" prefWidth="226.0"
+            style="-fx-background-color: lightgrey; -fx-border-radius: 15px; -fx-border-width: 2px; -fx-background-radius: 15px;">
+         <children>
+            <Button fx:id="daftarid" layoutX="25.0" layoutY="358.0" onAction="#TombolDaftar"
+                    prefHeight="30.0" prefWidth="174.0"
+                    style="-fx-background-color: #5865F2; -fx-background-radius: 20; -fx-text-fill: #FFFFFF;" text="Sign up">
+               <effect><DropShadow height="11.64" radius="2.41" width="0.0" /></effect>
+            </Button>
+            <Button fx:id="gugel" layoutX="25.0" layoutY="297.0" onAction="#TombolGugel"
+                    prefHeight="30.0" prefWidth="174.0"
+                    style="-fx-background-radius: 20; -fx-background-color: White;" text="Google">
+               <effect><DropShadow height="11.64" radius="2.41" width="0.0" /></effect>
+            </Button>
+            <ImageView fitHeight="23.0" fitWidth="26.0" layoutX="41.0" layoutY="300.0">
+               <image><Image url="@../../../../AsetSB/pngwing.com.png" /></image>
+            </ImageView>
+            <Button fx:id="loginsir" layoutX="25.0" layoutY="257.0" onAction="#TombolLogin"
+                    prefHeight="30.0" prefWidth="174.0"
+                    style="-fx-background-color: #5865F2; -fx-background-radius: 20; -fx-text-fill: #FFFFFF;" text="Login">
+               <effect><DropShadow height="11.64" radius="2.41" width="0.0" /></effect>
+            </Button>
+            <Text layoutX="106.0" layoutY="348.0" text="or" />
+            <TextField fx:id="pengguna1" layoutX="25.0" layoutY="81.0" prefHeight="25.0" prefWidth="174.0"
+                       promptText="Username / Email" />
+            <PasswordField fx:id="pass1" layoutX="25.0" layoutY="112.0" prefHeight="25.0" prefWidth="174.0"
+                           promptText="Password" />
+            <Text layoutX="75.0" layoutY="50.0" text="WELCOME" textAlignment="CENTER">
+               <font><Font name="System Bold" size="15.0" /></font>
+            </Text>
+         </children>
+         <effect><DropShadow height="6.96" radius="1.24" width="0.0" /></effect>
+      </Pane>
+   </children>
+</Pane>

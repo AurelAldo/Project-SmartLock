@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="277.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Class.LockControl.PilihAplikasiController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="93.0" stroke="DODGERBLUE" strokeType="INSIDE" width="277.0" />
+      <Text fill="WHITE" layoutX="83.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pilih Aplikasi">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="conf" layoutX="96.0" layoutY="501.0" mnemonicParsing="false" onAction="#handleConfirm" prefHeight="47.0" prefWidth="85.0" style="-fx-background-radius: 30;" text="Confirm" />
+      <VBox fx:id="vboxcont" layoutY="93.0" prefHeight="390.0" prefWidth="277.0" />
+      <Button layoutX="-9.0" layoutY="7.0" mnemonicParsing="false" onAction="#backButton1" style="-fx-background-color: transparent;" text="back" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="32.0">
+               <image>
+                  <Image url="@../../AsetSB/icons8-back-50%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

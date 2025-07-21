@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="277.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Class.LockControl.SelectorController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="80.0" stroke="DODGERBLUE" strokeType="INSIDE" width="277.0" />
+      <Text fill="WHITE" layoutX="87.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Aplikasi">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <VBox fx:id="appListContainer" layoutY="80.0" prefHeight="471.0" prefWidth="278.0" />
+      <Pane layoutY="550.0" prefHeight="51.0" prefWidth="278.0" style="-fx-border-color: grey; -fx-background-radius: 4 4 0 0; -fx-border-radius: 4 4 0 0;">
+         <children>
+            <Button fx:id="HomeView" layoutX="14.0" layoutY="1.0" mnemonicParsing="false" onAction="#tomHome" prefHeight="43.0" prefWidth="42.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <VBox prefHeight="52.0" prefWidth="52.0">
+                     <children>
+                        <ImageView fitHeight="27.0" fitWidth="29.0">
+                           <image>
+                              <Image url="@../../AsetSB/icons8-home-button-50.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#515151" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" textAlignment="CENTER" wrappingWidth="29.2017822265625">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </graphic>
+            </Button>
+            <Button fx:id="LockView" layoutX="81.0" layoutY="1.0" mnemonicParsing="false" onAction="#tomLock" prefHeight="43.0" prefWidth="42.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <VBox prefHeight="52.0" prefWidth="52.0">
+                     <children>
+                        <ImageView fitHeight="27.0" fitWidth="30.0">
+                           <image>
+                              <Image url="@../../AsetSB/icons8-lock-64.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#515151" strokeType="OUTSIDE" strokeWidth="0.0" text="Lock" textAlignment="CENTER" wrappingWidth="30.5562744140625">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </graphic>
+            </Button>
+            <Button fx:id="TaskView" layoutX="150.0" layoutY="1.0" mnemonicParsing="false" onAction="#tomTask" prefHeight="43.0" prefWidth="42.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <VBox prefHeight="52.0" prefWidth="52.0">
+                     <children>
+                        <ImageView fitHeight="27.0" fitWidth="28.0">
+                           <image>
+                              <Image url="@../../AsetSB/icons8-assignment-50.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#515151" strokeType="OUTSIDE" strokeWidth="0.0" text="Task" textAlignment="CENTER" wrappingWidth="29.1409912109375">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </graphic>
+            </Button>
+            <Button fx:id="ProfileView" layoutX="220.0" layoutY="1.0" mnemonicParsing="false" onAction="#tomProfile" prefHeight="47.0" prefWidth="32.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <VBox prefHeight="52.0" prefWidth="52.0">
+                     <children>
+                        <ImageView fitHeight="27.0" fitWidth="29.0">
+                           <image>
+                              <Image url="@../../AsetSB/profiles.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#515151" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile" textAlignment="CENTER">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="addButton" layoutX="212.0" layoutY="482.0" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="49.0" prefWidth="55.0" style="-fx-background-radius: 180; -fx-background-color: #1e90ff;" text="+" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

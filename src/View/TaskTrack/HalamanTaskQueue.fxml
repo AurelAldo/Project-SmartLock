@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="296.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Class.TaskControl.HalamanTaskQueueController">
+   <children>
+      <Label fx:id="tugasname" layoutX="14.0" layoutY="14.0" text="Nama Tugas" />
+      <Label fx:id="countDown" layoutX="189.0" layoutY="11.0" prefHeight="24.0" prefWidth="46.0" text="countdown deadline" textAlignment="RIGHT" />
+      <Button layoutX="250.0" mnemonicParsing="false" onAction="#EditTask" prefHeight="46.0" prefWidth="34.0" rotate="-90.0" style="-fx-background-color: transparant;" text="V" />
+   </children>
+</AnchorPane>
